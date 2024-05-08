@@ -29,11 +29,11 @@ function CalcularRankeadas(JogadorObj){
     }else if(QuantidadeRankeadas > 101){
         SetRankeadaJogador(JogadorObj,"Imortal");
     }
-    SetNivelJogador(QuantidadeRankeadas);
+    SetNivelJogador(JogadorObj,QuantidadeRankeadas);
     //O Herói tem de saldo de {saldoVitorias} está no nível de {nivel}
     //return "Seu rank "+GetRankeadaJogador(JogadorObj)+", Vitorias: "+GetQtsVitoria(JogadorObj) +" Derrotas: "+GetQtsDerrota(JogadorObj);
     //return ;
-    console.log("O Herói "+GetNomeJogador(JogadorObj)+" tem de saldo de " + GetQtsVitoria(JogadorObj) + " está no nível de " + GetRankeadaJogador(JogadorObj));
+    console.log("O Herói "+GetNomeJogador(JogadorObj)+" tem de saldo de " + GetNivelJogador(JogadorObj) + " está no nível de " + GetRankeadaJogador(JogadorObj));
 }
 
 
@@ -155,3 +155,5 @@ console.log("ADDPartida(Jogador1,\"Derrota\",10); nesse caso vai adicionar 10 de
 console.log("pode usar a função CalcularRankeadas(Jogador1), CalcularRankeadas(Jogador2), CalcularRankeadas(Jogador3) para visualizar os resultados dos ranks de cada jogador exemplo:");
 console.log("CalcularRankeadas(Jogador1); nesse caso vai mostrar \"O Herói Aparecido Celso de Souza Junior tem de saldo de 151 está no nível de Imortal\" ");
 CalcularRankeadas(Jogador1);
+CalcularRankeadas(Jogador2);
+CalcularRankeadas(Jogador3);
